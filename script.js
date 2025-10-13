@@ -47,11 +47,16 @@ function displayResults(searchResults) {
 
 function searchWikipedia(event) {
     if (event.key === "Enter" || event.type === "click") {
+        resultsEle.innerHTML = "";
         let searchInput = inputEle.value.trim();
         if (searchInput === "") {
             displayResults([]);
             return;
         }
+        let loaderEle = document.createElement("div");
+        loaderEle.classList.add("loader");
+        resultsEle.appendChild(loaderEle);
+
         let url = "https://apis.ccbp.in/wiki-search?search=" + encodeURIComponent(searchInput);
         let options = {
             method: "GET"
