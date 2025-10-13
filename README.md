@@ -14,7 +14,7 @@ A simple web application that allows users to search for Wikipedia articles and 
 
 - HTML5
 - CSS3
-- JavaScript (ES6)
+- JavaScript
 - Bootstrap 5.3.8
 
 ## How to Run
